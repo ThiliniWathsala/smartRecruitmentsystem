@@ -1,0 +1,65 @@
+<mat-card>
+        <!-- <mat-spinner *ngIf="!isLoading"></mat-spinner> -->
+        <form [formGroup]="form" (submit)="save()" >   <!--#postForm use to get objects in thi form ng model help to do that -->
+            <label for="Position">Position</label>
+            <mat-form-field>
+
+        <input 
+        matInput 
+        type="text"
+        formControlName="position"
+        
+         placeholder="entre position"
+        
+         >
+         <!-- <mat-error *ngIf="form.get('position').invalid">Please enter the Position.</mat-error>  -->
+    </mat-form-field>
+
+    <label for="Job Summery">Job Summery</label>
+    <mat-form-field>
+
+        <input 
+        matInput 
+        type="text"
+        formControlName="jobSummery"
+
+        placeholder="Entre Job Summery"
+
+        >
+ <!-- <mat-error *ngIf="form.get('jobSummery').invalid">Please enter the jobSummery.</mat-error>  -->
+</mat-form-field>
+
+<label for="job Description">job Description</label>
+<mat-form-field>
+       
+        <input 
+        matInput 
+        type="text"
+        formControlName="jobDescription"
+
+        placeholder="Entre Job Description"
+
+        >
+<!-- <mat-error *ngIf="form.get('jobDescrition').invalid">Please enter the job Description.</mat-error>  -->
+     
+    </mat-form-field>
+<!--
+    <label for="image">Image</label>
+
+    <div>
+            <button mat-stroked-button type="button" (click)="filePicker.click()" >Pick Image</button>     
+             <input type="file" #filePicker (change)="onImagePicked($event)">
+         </div>
+         <div class="image-preview" *ngIf=" imagePreview !=='' &&  imagePreview && form.get('image').valid" >
+             <img [src]=" imagePreview" [alt]="form.value.title">
+         </div>
+         
+         <br>
+        -->  
+    <button mat-raised-button color="accent" type="submit">Save Post</button>
+    </form>
+    </mat-card> 
+    
+    
+    <hr> 
+       
